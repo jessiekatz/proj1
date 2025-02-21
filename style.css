@@ -83,7 +83,7 @@ a[target="_blank"]::after {
 }
 
 .header {
-    background-image: url("../assets/background-pink.png");
+    background-image: url("assets/background-pink.png");
     background-size: cover;
 }
 
@@ -246,7 +246,7 @@ a[target="_blank"]::after {
     position: relative;
     width: 100%;
     height: auto;
-    background-image: url("../assets/bg2.png");
+    background-image: url("assets/bg2.png");
     background-size: cover;
 }
 .seal {
