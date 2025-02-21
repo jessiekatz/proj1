@@ -1,0 +1,511 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-size: 1.15em;
+}
+
+a {
+    color: rgb(74, 15, 210);
+    font-weight: 600;
+}
+
+a[target="_blank"]::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    background: url('https://static.thenounproject.com/png/1167424-200.png') no-repeat center;
+    background-size: cover;
+  }
+  
+
+.spacer {
+    height: 50vh;
+    pointer-events: none;
+}
+
+.quote, .numbers {
+    font-family: "Shippori Antique B1", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.quoteColor {
+    background: linear-gradient(to right, #f32170, #ff3508,#cf23cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.quotePlain {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+.kitty {
+    background: linear-gradient(to right, #f32170, #ff3508,#cf23cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.ying {
+    background: linear-gradient(to right, #2c29d3, rgb(187, 51, 240),#cf23cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.kai {
+    background: linear-gradient(to right, #2aa117, #c5ca1e);    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.numbers {
+    display: inline-flex;
+    min-width: 2.7em;
+}
+
+.prof1 {
+    position: relative;
+    display: inline;
+    font-size: 1.5em;
+}
+
+.prof5 {
+    padding: 8% 0%;
+}
+
+.header {
+    background-image: url("../assets/background-pink.png");
+    background-size: cover;
+}
+
+
+.header, .profit {
+    position: relative;    
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 2em;
+    height: 100vh;
+    color: black;
+    pointer-events: none;
+    font-size: 1.25em;
+}
+
+.profit {
+    margin-bottom: 15em;
+}
+
+
+.spam img {
+    padding: 8%;
+    margin-left: 12%;
+    top: 20%;
+    left: 10%;
+    position: absolute;
+    width: 50%;
+    pointer-events: none;
+
+}
+
+.spam {
+    position: relative;
+    height: auto;
+    width: 100%;
+    pointer-events: none;
+}
+
+.fill {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro, .profitTextDiv {
+    position: relative;
+    width: 70%;
+    padding-right: 10%;
+    color: black;
+    pointer-events: none;
+}
+
+.intro p {
+    right: 0;
+    pointer-events: none;
+}
+
+.title {
+    position: absolute;
+    font-size: 2em;
+    padding-left: 3em;
+}
+
+.lines {
+    position: relative;
+    top: 12%;
+    pointer-events: none;
+
+}
+
+.line {
+    opacity: 0;
+    position: relative;
+    pointer-events: none;
+}
+
+.line4 {
+    margin-top: 8%;
+    font-size: 0.8em;
+}
+
+
+
+.landing {
+    position: relative;
+    background-color: #ffffff00;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+}
+
+.profitTxt {
+    pointer-events: none;
+    opacity: 0;
+
+}
+
+.profitImg {
+    position: relative;
+    height: auto;
+    width: 100%;
+    pointer-events: none;
+
+}
+
+.profitImg img {
+    padding: 8%;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+
+
+.pt1 {
+    font-size: 0.8em !important;
+}
+
+.dunk {
+    position: relative;
+    top: 10%;
+    left: -40%;
+    width: 700px;
+    filter: drop-shadow(100px 200px 30px rgba(0, 0, 0, 0.3)); 
+
+}
+.star {
+    position: relative;
+    bottom: -100%;
+    width: 400px;
+    transform: scaleX(-1);    
+    /* -webkit-filter: drop-shadow(5px 5px 5px #3838388f); */
+    /* filter:         drop-shadow(5px 5px 5px #6666668f);  */
+    filter: drop-shadow(-100px 200px 30px rgba(0, 0, 0, 0.3)); 
+
+}
+.bobba {
+    position: relative;
+    top: 50%;
+    left: 15%;
+    width: 600px;  
+    /* -webkit-filter: drop-shadow(5px 5px 5px #3838388f); */
+    /* filter:         drop-shadow(5px 5px 5px #6666668f);  */
+    filter: drop-shadow(100px 200px 30px rgba(0, 0, 0, 0.3)); 
+
+}
+
+
+
+.seals {
+    position: relative;
+    top: -30%;
+    width: 60%;
+    margin: auto;
+    height: 50vh;
+}
+
+.cupDiv {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url("../assets/bg2.png");
+    background-size: cover;
+}
+.seal {
+    pointer-events: none;
+    z-index: 10;
+    -webkit-filter: drop-shadow(5px 5px 5px #3838388f);
+    filter:         drop-shadow(5px 5px 5px #6666668f); 
+}
+
+.s1 {  
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    z-index: 10;
+}
+
+.s2 {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.s3 {   
+    position: absolute;
+    top: 160px;
+    left: 150px;
+    z-index: 2;
+}
+
+.s4 {
+    position: absolute;
+    z-index: 3;
+    transform: rotate(90deg);
+    top: 100px;
+    left: 200px;
+
+}
+
+.spacer2 {
+    position: relative;
+    height: 10em;
+    width: 100%;
+    pointer-events: none;
+
+}
+
+.pearl {
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    z-index: 0;
+}
+
+.cup {
+    position: relative;
+    display: block;
+    top: -100px;
+    left: 200px;
+    transform: rotate(70deg);
+}
+
+#sealTxt {
+    position: absolute;
+    top: 400px;
+    left: 175px;
+    z-index: 0;
+    pointer-events: none;
+    font-size: 1.5em;
+}
+
+#cupTxt {
+    position: absolute;
+    top: 300px;
+    left: 730px;
+    z-index: 10;
+    pointer-events: none;
+    font-size: 1.5em;
+    -webkit-filter: drop-shadow(0px 0px 5px #ffffffb1);
+    filter:         drop-shadow(0px 0px 5px #ffffff); 
+}
+
+
+
+
+.p2 {
+    height: 250vh;
+    position: relative;
+    /* margin-bottom: 35vh; */
+    padding: 3em 5em 3em 5em;
+    background-image: url("../assets/bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    text-align: center;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.p2Txt {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.part {
+    position: relative;
+    padding-top: 2em;
+    opacity: 0;
+    pointer-events: none;
+    margin: 1em 1em;
+}
+
+.part3, .partb {
+    font-size: 1.5em;
+    pointer-events: none;
+    margin: 0;
+}
+
+.quoteDiv {
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    width: 60%;
+    margin: 5% auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.kittyDiv {
+    position: relative;
+    width: 40%;
+    margin-top: 2%;
+    margin-left: 8%;
+    background-color: #ffffff00;
+    z-index: 2;
+}
+
+.quoteTxt {
+    position: relative;
+    /* width: 300px; */
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    z-index: 2;
+    opacity: 0;
+    margin-left: 10%;
+    pointer-events: none;
+}
+
+.cafeDiv {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cafeDiv img {
+    width: 100%;
+} 
+
+.cafeDivs {
+    position: relative;
+    width: 100%;
+} 
+ 
+
+.cafe {
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.cafeBuild, .cafe2, .cafe3, .cafe4, .cafe5, .cafe6 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    height: auto; 
+    padding: 3em;
+    padding-bottom: 5em;
+    pointer-events: none;
+
+}
+
+.container .quote {
+    opacity: 0;
+}
+
+.r4, .r5 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.r5 {
+    margin-top: 10%;
+    font-weight: 500;
+}
+
+.p4 {
+    position: relative;
+    height: auto;
+    background-image: url("assets/bg3.png");
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+}
+
+
+.kittyEnd, .kaiEnd, .yingEnd {
+    margin-top: 20%;
+    pointer-events: none;
+
+}
+
+.pos, .neg {
+    width: 50%;
+    padding: 5%;
+    pointer-events: none;
+
+}
+
+.conclusion {
+    position: relative;
+    padding: 0% 5% 5% 5%;
+    margin: 15% auto 5% auto;
+    width: 60%;
+    text-align: center;
+    line-height: 1.75em;
+    pointer-events: none;
+}
+
+.end {
+    background: linear-gradient(to bottom, white, #efe4d7);
+    margin-bottom: 0;
+    height: 15vh;
+    padding: 5%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.links {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.end p {
+    margin-bottom: 0;
+    padding: 0 3%;
+    margin: 0 auto;
+    font-size: 0.8em !important;
+    display: inline;
+}
