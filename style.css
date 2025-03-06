@@ -6,13 +6,22 @@ body, html {
     overflow-x: hidden;
     font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
-    font-size: 1.15em;
+    font-size: 1em;
 }
 
+
 a {
-    color: rgb(74, 15, 210);
+    text-decoration: none; 
+    color: #000000; 
     font-weight: 600;
+    transition: color 0.3s ease;
+    pointer-events: auto;
 }
+
+a:hover {
+    color:#2c29d3;
+}
+
 
 a[target="_blank"]::after {
     content: "";
@@ -78,21 +87,15 @@ a[target="_blank"]::after {
     font-size: 1.5em;
 }
 
-.prof5 {
-    padding: 8% 0%;
-}
 
-.header {
+.header{
+    position: relative;      
     background-image: url("assets/background-pink.png");
-    background-size: cover;
-}
-
-
-.header, .profit {
-    position: relative;    
+    background-size: cover;  
     display: flex;
     justify-content: flex-start;
     padding-top: 2em;
+    padding-bottom: 4em;
     height: 100vh;
     color: black;
     pointer-events: none;
@@ -103,52 +106,38 @@ a[target="_blank"]::after {
     margin-bottom: 15em;
 }
 
+.spam {
+    opacity: 0;
+}
 
 .spam img {
-    padding: 8%;
-    margin-left: 12%;
-    top: 20%;
-    left: 10%;
     position: absolute;
-    width: 50%;
+    margin-top: 1em;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 20%;
     pointer-events: none;
-
 }
 
-.spam {
+.intro {
     position: relative;
-    height: auto;
+    display: flex;
+    align-items: flex-start;
     width: 100%;
-    pointer-events: none;
+    height: 100%;
 }
 
-.fill {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.intro, .profitTextDiv {
-    position: relative;
-    width: 70%;
-    padding-right: 10%;
-    color: black;
-    pointer-events: none;
-}
-
-.intro p {
-    right: 0;
-    pointer-events: none;
-}
 
 .title {
-    position: absolute;
+    position: relative;
     font-size: 2em;
-    padding-left: 3em;
 }
 
 .lines {
     position: relative;
-    top: 12%;
+    margin-left: 6em;
+    width: 40%;
     pointer-events: none;
 
 }
@@ -159,79 +148,52 @@ a[target="_blank"]::after {
     pointer-events: none;
 }
 
-.line4 {
-    margin-top: 8%;
-    font-size: 0.8em;
+.profitDiv {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    margin: 2em 0 0 6em;
+    pointer-events: none;
 }
 
-
-
-.landing {
-    position: relative;
-    background-color: #ffffff00;
-    height: auto;
-    width: 100%;
-    z-index: 1;
-    pointer-events: none;
-
+.profitTxtDiv {
+    position: absolute;
+    width: 35%;
+    top: 20%;
+    right: 20%;
 }
 
 .profitTxt {
-    pointer-events: none;
     opacity: 0;
-
 }
 
-.profitImg {
-    position: relative;
+.profitImgDiv {
+    position: absolute; 
+    z-index: -1;
+    top: 30%;
+    /* right: -50%; */
     height: auto;
-    width: 100%;
     pointer-events: none;
-
 }
 
 .profitImg img {
-    padding: 8%;
-    position: absolute;
     pointer-events: none;
 }
 
-
-
-
-.pt1 {
-    font-size: 0.8em !important;
-}
-
 .dunk {
-    position: relative;
-    top: 10%;
-    left: -40%;
-    width: 700px;
-    filter: drop-shadow(100px 200px 30px rgba(0, 0, 0, 0.3)); 
-
+    filter: drop-shadow(20px 20px 20px rgba(133, 133, 133, 0.3)); 
+    width: 350px;  
+    opacity: 0; 
 }
 .star {
     position: relative;
-    bottom: -100%;
-    width: 400px;
-    transform: scaleX(-1);    
-    /* -webkit-filter: drop-shadow(5px 5px 5px #3838388f); */
-    /* filter:         drop-shadow(5px 5px 5px #6666668f);  */
-    filter: drop-shadow(-100px 200px 30px rgba(0, 0, 0, 0.3)); 
-
+    left: -10%;
+    filter: drop-shadow(20px 20px 20px rgba(133, 133, 133, 0.3)); 
+    width: 250px;       
+    transform: scaleX(-1);   
+    opacity: 0; 
 }
-.bobba {
-    position: relative;
-    top: 50%;
-    left: 15%;
-    width: 600px;  
-    /* -webkit-filter: drop-shadow(5px 5px 5px #3838388f); */
-    /* filter:         drop-shadow(5px 5px 5px #6666668f);  */
-    filter: drop-shadow(100px 200px 30px rgba(0, 0, 0, 0.3)); 
-
-}
-
 
 
 .seals {
@@ -332,9 +294,8 @@ a[target="_blank"]::after {
 
 
 .p2 {
-    height: 250vh;
+    height: 200vh;
     position: relative;
-    /* margin-bottom: 35vh; */
     padding: 3em 5em 3em 5em;
     background-image: url("assets/bg.png");
     background-size: contain;
@@ -346,10 +307,6 @@ a[target="_blank"]::after {
     z-index: 2;
 }
 
-.p2Txt {
-    width: 40%;
-    margin: 0 auto;
-}
 
 .part {
     position: relative;
@@ -360,46 +317,49 @@ a[target="_blank"]::after {
 }
 
 .part3, .partb {
-    font-size: 1.5em;
+    font-size: 1.2em;
     pointer-events: none;
     margin: 0;
 }
 
+.p2Txt {
+    width: 40%;
+    margin: 0 auto;
+}
 .quoteDiv {
     position: relative;
     margin-top: 2%;
-    margin-bottom: 10%;
     width: 60%;
     margin: 5% auto;
     z-index: 2;
     pointer-events: none;
 }
 
-.kittyDiv {
+.kDiv {
     position: relative;
-    width: 40%;
-    margin-top: 2%;
-    margin-left: 8%;
-    background-color: #ffffff00;
-    z-index: 2;
+    display: inline;
+    text-align: center;
+    height: 15em;
+    margin: auto;
+    margin-bottom: 7em;
+    width: 50%;
 }
 
+
 .quoteTxt {
-    position: relative;
-    /* width: 300px; */
+    position: absolute;
     padding: 0;
     margin: 0;
-    font-size: 1em;
+    font-size: 1.2em;
     z-index: 2;
     opacity: 0;
-    margin-left: 10%;
     pointer-events: none;
 }
 
 .cafeDiv {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     pointer-events: none;
     z-index: 0;
 }
@@ -411,12 +371,12 @@ a[target="_blank"]::after {
 .cafeDivs {
     position: relative;
     width: 100%;
+    pointer-events: none;
 } 
  
 
 .cafe {
     position: absolute;
-    /* top: 50%; */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -425,7 +385,7 @@ a[target="_blank"]::after {
 }
 
 
-.cafeBuild, .cafe2, .cafe3, .cafe4, .cafe5, .cafe6 {
+ .cafe2, .cafe3, .cafe4, .cafe5, .cafe6 {
     opacity: 0;
     pointer-events: none;
 }
@@ -434,7 +394,7 @@ a[target="_blank"]::after {
     display: flex;
     height: auto; 
     padding: 3em;
-    padding-bottom: 5em;
+    padding-bottom: 3em;
     pointer-events: none;
 
 }
@@ -444,30 +404,40 @@ a[target="_blank"]::after {
 }
 
 .r4, .r5 {
-    opacity: 0;
     pointer-events: none;
-}
-
-.r5 {
-    margin-top: 10%;
-    font-weight: 500;
 }
 
 .p4 {
     position: relative;
-    height: auto;
+    width: 100%;
+    margin-top: 30vh;
+    padding-top: 10em;
     background-image: url("assets/bg3.png");
     background-repeat: no-repeat;
     pointer-events: none;
-
 }
 
-
-.kittyEnd, .kaiEnd, .yingEnd {
-    margin-top: 20%;
+.p4Txt {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 5em auto;
     pointer-events: none;
-
 }
+
+.kittyEnd, .yingEnd, .kaiEnd {
+    margin: 15em auto;
+    text-align: center;
+    width: 50%;
+    pointer-events: none;
+    font-size: 1.2em;
+}
+
+
+.r1, .e1, .r2, .e2, .r3, .e3{
+    opacity: 0;
+}
+
 
 .pos, .neg {
     width: 50%;
@@ -478,34 +448,35 @@ a[target="_blank"]::after {
 
 .conclusion {
     position: relative;
-    padding: 0% 5% 5% 5%;
-    margin: 15% auto 5% auto;
-    width: 60%;
+    left: 50%;
+    margin-bottom: 10em;
+    width: 40%;
+    font-size: 1.2em;
     text-align: center;
-    line-height: 1.75em;
+    line-height: 1.5em;
+    pointer-events: none;
+}
+
+.cr {
+    position: relative;
+    padding: 1em;
+    margin: auto;
+    opacity: 0;
     pointer-events: none;
 }
 
 .end {
-    background: linear-gradient(to bottom, white, #efe4d7);
-    margin-bottom: 0;
-    height: 15vh;
-    padding: 5%;
-    display: flex; 
+    display: flex;
     justify-content: center; 
-    align-items: center; 
+    margin-bottom: 20vh;
+    padding: 20px;
 }
 
 .links {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
+    display: flex;
+    gap: 20px;
 }
 
-.end p {
-    margin-bottom: 0;
-    padding: 0 3%;
-    margin: 0 auto;
-    font-size: 0.8em !important;
-    display: inline;
+.links p {
+    margin: 0;
 }

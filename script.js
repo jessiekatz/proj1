@@ -1,150 +1,78 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
-// Pin the header
 ScrollTrigger.create({
   trigger: ".header",
   start: "top top",
-  end: "+=3400", // Adjust this value based on your content height
+  end: "+=5200",
   pin: true,
   pinSpacing: true,
 });
 
-gsap.to(".title", {
-  scrollTrigger: {
-    trigger:".title",
-    start: "top top",
-    end: "top top",
-    scrub: 6,
-  },
-  scale: 0.5,
-  x: "-15%",
-  y: "-40%"
-})
-
-gsap.to([".fill1", ".line1"], {
-  scrollTrigger: {
-    trigger: ".fill1",
-    start: "top -20",
-    end: "top -40%",
-    scrub: 3, 
-  },
-  opacity: 1,
-  ease: "power2.out", 
-});
 
 gsap.to(".line1", {
   scrollTrigger: {
-    trigger: ".fill1",
-    start: "top -20",
-    end: "top -40%",
+    trigger: ".intro",
+    start: "bottom 80%",
+    end: "bottom 50%",
     scrub: 3,
   },
-  y: -100,
-  ease: "power2.out"
+  opacity: 1
 })
-
-gsap.to([".fill2", ".line2"], {
-  scrollTrigger: {
-    trigger: ".fill2",
-    start: "top -70%",
-    end: "top -120%",
-    scrub: 3, 
-  },
-  opacity: 1,
-  ease: "power2.out", 
-});
 
 gsap.to(".line2", {
   scrollTrigger: {
-    trigger: ".fill2",
-    start: "top -70",
-    end: "top -120%",
+    trigger: ".intro",
+    start: "bottom 20%",
+    end: "bottom top",
     scrub: 3,
   },
-  y: -100,
-  ease: "power2.out"
+  opacity: 1
 })
 
-gsap.to([".fill3", ".line3"], {
-  scrollTrigger: {
-    trigger: ".fill3",
-    start: "top -170%",
-    end: "top -210%",
-    scrub: 3, 
-  },
-  opacity: 1,
-  ease: "power2.out", 
-});
 gsap.to(".line3", {
   scrollTrigger: {
-    trigger: ".fill3",
-    start: "top -170",
-    end: "top -210%",
+    trigger: ".intro",
+    start: "bottom -20%",
+    end: "bottom -50%",
     scrub: 3,
   },
-  y: -100,
-  ease: "power2.out"
+  opacity: 1
 })
 
-gsap.to([".fill4", ".line4"], {
+gsap.to(".like", {
   scrollTrigger: {
-    trigger: ".fill4",
-    start: "top -270%",
-    end: "top -350%",
-    scrub: 3, 
+    trigger: ".intro",
+    start: "bottom -80%",
+    end: "bottom -100%",
+    scrub: 3,
   },
-  opacity: 0.8,
-  ease: "power2.out", 
-});
-gsap.to(".line4", {
-  scrollTrigger: {
-    trigger: ".fill4",
-    start: "top -270%",
-    end: "top -350%",
-    scrub: 3, 
-  },
-  y: -100,
-  ease: "power2.out", 
-});
-
-ScrollTrigger.create({
-  trigger: ".profit",
-  start: "top top",
-  end: "+=2000", 
-  pin: true,
-  pinSpacing: true,
-});
-
-
-gsap.to(".dunk", {
-  scrollTrigger: {
-    trigger: ".dunk",
-    start: "top 80%",
-    end: "bottom top",
-    scrub: 3, 
-  },
-  y: -350,
-})
-gsap.to(".star", {
-  scrollTrigger: {
-    trigger: ".star",
-    start: "top 90%",
-    end: "bottom top",
-    scrub: 2, 
-  },
-  y: -650,
+  opacity: 1
 })
 
-gsap.to(".bobba", {
+gsap.to(".why", {
   scrollTrigger: {
-    trigger: ".bobba",
-    start: "top 70%",
-    end: "bottom top",
-    scrub: 2, 
+    trigger: ".intro",
+    start: "bottom -120%",
+    end: "bottom -140%",
+    scrub: 3,
   },
-  y: -300,
+  opacity: 1
 })
+
+
+gsap.to(".lines", {
+  scrollTrigger: {
+    trigger: ".intro",
+    start: "bottom -200%",
+    end: "bottom -230%",
+    scrub: 3,
+  },
+  opacity: 0
+})
+
+
+
 
 // numbers
 var startCount = 0,
@@ -152,11 +80,10 @@ var startCount = 0,
 
 gsap.timeline({
     scrollTrigger: {
-      trigger: ".prof1",
-      start: "top top",
-      end: "bottom -100",
+      trigger: ".intro",
+      start: "bottom -250%",
+      end: "bottom -270%",
       scrub: 3,
-      // once: true,
     }
   })
   .to(num, {var: 6635, scrub: 3, ease: "none", onUpdate: changeNumber})
@@ -166,57 +93,73 @@ function changeNumber() {
   document.querySelector(".numbers").innerHTML = Math.round(num.var);
 }
 
+gsap.to(".dunk", {
+  scrollTrigger: {
+    trigger: ".intro",
+    start: "bottom -280%",
+    end: "bottom -400%",
+    scrub: 3,
+  },
+  y: -200,
+  opacity: 1,
+})
+
+gsap.to(".star", {
+  scrollTrigger: {
+    trigger: ".intro",
+    start: "bottom -290%",
+    end: "bottom -400%",
+    scrub: 3,
+  },
+  y: -340,
+  opacity: 1,
+})
+
 gsap.to(".prof2", {
   scrollTrigger: {
-    trigger: ".prof2",
-    start: "top -15%",
-    end: "bottom -100",
-    scrub: 5,
-    once: true,
+    trigger: ".intro",
+    start: "bottom -410%",
+    end: "bottom -430%",
+    scrub: 3,
   },
   opacity: 1,
 })
 gsap.to(".prof3", {
   scrollTrigger: {
-    trigger: ".prof3",
-    start: "top -35%",
-    end: "bottom -200",
-    scrub: 5,
-    once: true,
+    trigger: ".intro",
+    start: "bottom -440%",
+    end: "bottom -460%",
+    scrub: 3,
   },
   opacity: 1,
 })
 gsap.to(".prof4", {
   scrollTrigger: {
-    trigger: ".prof4",
-    start: "top -75%",
-    end: "bottom -270",
-    scrub: 5,      
-    once: true,
+    trigger: ".intro",
+    start: "bottom -470%",
+    end: "bottom -500%",
+    scrub: 3,
   },
   opacity: 1,
 })
 gsap.to(".prof5", {
   scrollTrigger: {
-    trigger: ".prof5",
-    start: "top -135%",
-    end: "bottom -300",
-    scrub: 5,
-    once: true,
+    trigger: ".intro",
+    start: "bottom -510%",
+    end: "bottom -530%",
+    scrub: 3,
   },
   opacity: 1,
 })
 gsap.to(".prof6", {
   scrollTrigger: {
-    trigger: ".prof6",
-    start: "top -155%",
-    end: "bottom -300",
-    scrub: 5,
-    once: true,
+    trigger: ".intro",
+    start: "bottom -540%",
+    end: "bottom -560%",
+    scrub: 3,
   },
   opacity: 1,
 })
-
 
 gsap.to(".s1", {
   scrollTrigger: {
@@ -364,27 +307,17 @@ gsap.to(".part4", {
 let pin = ScrollTrigger.create({
   trigger: ".cafeDiv",
   pin: true,
-  start: "top 45%",
-  end: "+=3000",
+  start: "top 15%",
+  end: "+=1500",
   pinSpace: true,
 });
 
-
-gsap.to(".cafeBuild", {
-    scrollTrigger: {
-        trigger: ".cafeBuild",
-        start: "top 45%",
-        end: "+=1000",
-        scrub: true,
-    },
-    opacity: 1,
-});
 
 gsap.to(".cafe2", {
   scrollTrigger: {
     trigger: ".cafe2",
     start: "top 15%",
-    end: "bottom 5%",
+    end: "top top",
     scrub: true,
   },
   opacity: 1,
@@ -430,98 +363,148 @@ scrollTrigger: {
 opacity: 1,
 });
 
-
-let tl = gsap.timeline({
+gsap.to(".q1", {
   scrollTrigger: {
-    trigger: '.cafeBuild',
-    start: 'top -100',
-    end: 'bottom center',
-    scrub: 5,
-  }
-});
-tl.to('.q1', {
-  y: -400,
-  opacity: 1,
-})
-gsap.to('.q2', {  
-  scrollTrigger: {
-    trigger: '.q2',
-    start: 'top -30%',
-    end: 'bottom top',
-    scrub: 5,
-  },
-  opacity: 1,
-  y: -380,
-})
-gsap.to('.q3', {  
-  scrollTrigger: {
-    trigger: '.q3',
-    start: 'top -50%',
-    end: 'bottom top',
-    scrub: 5,
-  },
-  opacity: 1,
-  y: -360,
-})
-gsap.to('.q4', {  
-  scrollTrigger: {
-    trigger: '.q4',
-    start: 'top -75%',
-    end: 'bottom top',
-    scrub: 5,
-  },
-  opacity: 1,
-  y: -340,
-})
-
-gsap.to(".pos", {
-  y: 350,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".pos",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true,
-  }
-});
-
-
-gsap.to(".neg", {
-  y: -150,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".neg",
-    start: "top bottom",
-    end: "bottom top",
+    trigger: ".q1",
+    start: "top 30%",
+    end: "top top",
     scrub: 2,
-  }
-});
-
-gsap.utils.toArray([".r1", ".r2", ".r3", ".r4", ".r5"]).forEach((el) => {
-  gsap.to(el, {
-    scrollTrigger: {
-      trigger: el,
-      start: "top 75%",
-      end: "top 20%",
-      scrub: 1,
-    },
-    opacity: 1,
-  });
-});
-
-gsap.to(".conclusion", {
+  },
+  opacity: 1,
+})
+gsap.to(".q1", {
   scrollTrigger: {
-    trigger: ".conclusion",
-    start: "top 15%",  
-    end: "bottom+=1000", 
-    pin: true,
-    pinSpacing: false,  
-    scrub: 1,
-    anticipatePin: 1,
-  }
+    trigger: ".cafeBuild",
+    start: "top -20%",
+    end: "+=1000",
+    scrub: 2,
+  },
+  opacity: 0,
+});
+gsap.to(".q2", {
+  scrollTrigger: {
+    trigger: ".cafeBuild",
+    start: "top -20%",
+    end: "top -40%",
+    scrub: 2,
+  },
+  opacity: 1,
+});
+gsap.to(".q2", {
+  scrollTrigger: {
+    trigger: ".cafeBuild",
+    start: "top -50%",
+    end: "+=1000",
+    scrub: 2,
+  },
+  opacity: 0,
+});
+gsap.to(".q3", {
+  scrollTrigger: {
+    trigger: ".cafeBuild",
+    start: "top -50%",
+    end: "top -80%",
+    scrub: 2,
+  },
+  opacity: 1,
+});
+gsap.to(".q3", {
+  scrollTrigger: {
+    trigger: ".cafeBuild",
+    start: "top -100%",
+    end: "+=1000",
+    scrub: 2,
+  },
+  opacity: 0,
+});
+gsap.to(".q4", {
+  scrollTrigger: {
+    trigger: ".cafeBuild",
+    start: "top -100%",
+    end: "top -130%",
+    scrub: 2,
+  },
+  opacity: 1,
 });
 
+gsap.to(".e1", {
+  scrollTrigger: {
+    trigger: ".e1",
+    start: "top 90%",
+    end: "top 60%",
+    scrub: 2,
+  },
+  opacity: 1,
+})
+gsap.to(".r1", {
+  scrollTrigger: {
+    trigger: ".r1",
+    start: "top 60%",
+    end: "top 40%",
+    scrub: 2,
+  },
+  opacity: 1,
+})
+
+gsap.to(".e2", {
+  scrollTrigger: {
+    trigger: ".e2",
+    start: "top 90%",
+    end: "top 60%",
+    scrub: 2,
+  },
+  opacity: 1,
+})
+
+gsap.to(".r2", {
+  scrollTrigger: {
+    trigger: ".r2",
+    start: "top 60%",
+    end: "top 40%",
+    scrub: 2,
+  },
+  opacity: 1,
+})
+gsap.to(".e3", {
+  scrollTrigger: {
+    trigger: ".e3",
+    start: "top 90%",
+    end: "top 60%",
+    scrub: 2,
+  },
+  opacity: 1,
+})
+gsap.to(".r3", {
+  scrollTrigger: {
+    trigger: ".r3",
+    start: "top 60%",
+    end: "top 40%",
+    scrub: 2,
+  },
+  opacity: 1,
+})
 
 
+
+let lines = gsap.utils.toArray(".cr");
+
+  gsap.set(lines, { opacity: 0 }); 
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".conclusion",
+      start: "top 30%",
+      end: "+=250%",
+      scrub: 1,
+      pin: ".p4",
+    }
+  });
+
+  lines.forEach((line, index) => {
+    tl.to(line, { opacity: 0, scrub: 3 })
+      .to(line, { opacity: 1, scrub: 3 }, "+=1"); 
+  });
+
+  tl.to(lines[lines.length - 1], { opacity: 1, duration: 0.5 });
 
 
